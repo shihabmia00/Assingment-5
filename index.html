@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind Css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <!-- ? Lexend Google Font -->
@@ -23,9 +26,9 @@
 
 <body class="lexend">
     <!--  Header Start Here -->
-    <header class="sticky top-0 left-0 right-0">
+    <header class="sticky top-0 left-0 right-0 backdrop-blur">
         <nav class="mb-5  flex justify-around max-sm:w-[100%] bg-[#F9F7F3] p-4 ">
-            <button class="bg-[#B4F461] py-3 px-6 rounded-xl font-bold">Blog</button>
+            <a href="./blog.html"><button class="bg-[#B4F461] py-3 px-6 rounded-xl font-bold">Blog</button></a>
             <!-- ? Logo Icon is here -->
             <div class="flex justify-center items-center gap-2">
                 <img src="./assets/logo.png" alt="">
@@ -37,17 +40,17 @@
                 </span>
                 <p class="font-bold">55000 <span class="font-bold">BDT</span></p>
             </div>
-
         </nav>
+        <!--  2 Button is here  -->
+        <div class="font-bold space-x-3  lg:w-[1000px] mx-auto text-center">
+            <button class="font-bold border-2 py-3 px-5 rounded-lg bg-gray-200">Donation</button>
+            <button class=" bg-gray-200 border-2 py-3 px-5 rounded-lg">History</button>
+        </div>
     </header>
 
     <!--  Main Section Start Here -->
     <main class="">
-        <!--  2 Button is here  -->
-        <div class="space-x-3 mt-[40px] lg:w-[1000px] mx-auto text-center">
-            <button class="font-bold border-2 py-3 px-5 rounded-lg">Donation</button>
-            <button class="border-2 py-3 px-5 rounded-lg">History</button>
-        </div>
+        
         <!-- Donate Card Section is Here -->
          <section class="bg-white shadow-sm rounded-lg lg:p-5 lg:w-[1000px] lg:mx-auto border-2 mt-9 max-sm:w-[95%] mx-auto max-sm:p-4">
             <div class="lg:flex justify-center items-center gap-8 ">
@@ -80,7 +83,7 @@
                 <!-- Text Input and Button -->
                  <div class="space-y-3">
                     <!-- Balance -->
-                    <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[120px] p-2 rounded-lg justify-center items-center">
+                    <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[120px] p-2 rounded-lg justify-center items-center lg:mt-8">
                         <img src="./assets/coin.png" alt="">
                         <p class="font-bold">0 <span>BDT</span></p>
                     </div>
@@ -102,7 +105,7 @@
                 <!-- Text Input and Button -->
                  <div class="space-y-3">
                     <!-- Balance -->
-                    <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[120px] p-2 rounded-lg justify-center items-center">
+                    <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[120px] p-2 rounded-lg justify-center items-center lg:mt-8">
                         <img src="./assets/coin.png" alt="">
                         <p class="font-bold">0 <span>BDT</span></p>
                     </div>
