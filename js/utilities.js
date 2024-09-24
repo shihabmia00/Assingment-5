@@ -12,10 +12,4 @@ function getInnerTextValue(id){
 
 
 
-// Modal Close Function
-let popup = document.getElementById('modal')
-function closePopup (){
-    popup.classList.add('hidden')
-}
 
-// Donation btn show / hide 

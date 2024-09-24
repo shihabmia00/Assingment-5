@@ -12,38 +12,72 @@
 // donate-btn1
 // donate-btn2
 // donate-btn3
+// transaction-input
 
-document.getElementById('donate-btn1').addEventListener('click', function () {
-    // get values and innertext
-    const donateinput1 = addedValueShow('donate-balance-amount1')
-    const donatebalance = getInnerTextValue('donate-balance1')
-    const mainBalance = getInnerTextValue('main-balance')
-    // if condition
-    if (donatebalance > 0) {
-        const newBalance = donatebalance + donateinput1
-        document.getElementById('donate-balance1').innerText = newBalance
-        const finalUpdate = mainBalance - donateinput1
-        document.getElementById('main-balance').innerText = finalUpdate
+
+// Card Section 1 Done
+function transferMoney() {
+    let inputAmount = addedValueShow('donate-balance-amount1');
+    let mainBalance = getInnerTextValue('main-balance')
+    let donateBalance = getInnerTextValue('donate-balance1')
+    // if condition is here 
+    if (inputAmount > 0 && inputAmount <= mainBalance) {
+        let plus = donateBalance + inputAmount
+        let minus = mainBalance - inputAmount
+        // Update the UI 
+        document.getElementById('main-balance').innerText = minus
+        document.getElementById('donate-balance1').innerText = plus
+        //  Show the Modal
         document.getElementById('modal').classList.remove('hidden')
-        
-
-        if (donateinput1 <= 0 ) {
-            alert('Wrong Amount please try again')
-        }
-      
     }
-
     else {
-        alert('Wrong Amount please try again error')
+        alert('Invalid amount or insufficient balance')
     }
-
-
-})
-
-// Modal Close Function
-let popup = document.getElementById('modal')
-function closePopup (){
-    popup.classList.add('hidden')
 }
 
+// Close the modal
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden')
+}
+
+// Card Section 2 Done
+function transferMoneyTwo() {
+    let inputAmountTwo = addedValueShow('donate-balance-amount2');
+    let mainBalanceTwo = getInnerTextValue('main-balance')
+    let donateBalanceTwo = getInnerTextValue('donate-balance2')
+    // if condition is here 
+    if (inputAmountTwo > 0 && inputAmountTwo <= mainBalanceTwo) {
+        let plusTwo = donateBalanceTwo + inputAmountTwo
+        let minusTwo = mainBalanceTwo - inputAmountTwo
+        // Update the UI 
+        document.getElementById('main-balance').innerText = minusTwo
+        document.getElementById('donate-balance2').innerText = plusTwo
+        //  Show the Modal
+        document.getElementById('modal').classList.remove('hidden')
+    }
+    else {
+        alert('Invalid amount or insufficient balance')
+    }
+}
+
+
+// // Card Section 3 Done
+function transferMoneyThree() {
+    let inputAmountThree = addedValueShow('donate-balance-amount3');
+    let mainBalanceThree = getInnerTextValue('main-balance')
+    let donateBalanceThree = getInnerTextValue('donate-balance3')
+    // if condition is here 
+    if (inputAmountThree > 0 && inputAmountThree <= mainBalanceThree) {
+        let plusThree = donateBalanceThree + inputAmountThree
+        let minusThree = mainBalanceThree - inputAmountThree
+        // Update the UI 
+        document.getElementById('main-balance').innerText = minusThree
+        document.getElementById('donate-balance3').innerText = plusThree
+        //  Show the Modal
+        document.getElementById('modal').classList.remove('hidden')
+    }
+    else {
+        alert('Invalid amount or insufficient balance')
+    }
+}
 

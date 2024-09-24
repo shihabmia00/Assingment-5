@@ -49,18 +49,18 @@
     </header>
     <!-- Modal -->
     <section id="modal" class="hidden relative">
-        <div class="rounded-lg bg-white border-2 w-[320px] p-4 text-center space-y-4 mx-auto absolute right-2 left-2 bottom-[-400px]">
-            <h1 class="font-bold text-2xl">Congrates!</h1>
-            <img class="mx-auto" src="./assets/coin.png" alt="">
+        <div class="rounded-xl bg-white border-2 w-[350px] p-4 text-center space-y-4 mx-auto fixed left-[550px]">
+            <h1 class="font-bold text-2xl">Congrats!</h1>
+            <img class="mx-auto w-[40px]" src="./assets/coin.png" alt="">
             <p>You Have Donated for Humankind </p>
             <h1>Successfully</h1>
-            <button onclick="closePopup ()" id="close-btn" class="bg-gray-100 py-2 px-5 rounded-lg">Close Confirmation</button>
+            <button onclick="closeModal ()" id="close-btn" class="bg-[#B4F461] py-2 px-5 rounded-lg font-bold">Close Confirmation</button>
         </div>
     </section>
     <!--  Main Section Start Here -->
     <main class="">
         <!-- Transaction History  -->
-         <div class="hidden border-2 rounded-lg p-4 lg:w-[600px] mx-auto mt[50px]">
+         <div id="transaction-input" class="hidden border-2 rounded-lg p-4 lg:w-[600px] mx-auto mt[50px]">
 
          </div>
         <!-- Donate Card Section is Here -->
@@ -81,7 +81,7 @@
                     <p class="lg:w-[460px] max-sm:text-center"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                     <input id="donate-balance-amount1" class="border border-1 lg:w-[450px] rounded-lg p-2 placeholder:text-black max-sm:text-center mx-auto max-sm:w-[100%]" type="number" placeholder="Write Donation Amount">
                     <br>
-                    <button id="donate-btn1" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
+                    <button onclick="transferMoney()" id="donate-btn1" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
                  </div>
              </div>
          </section>
@@ -97,13 +97,13 @@
                     <!-- Balance -->
                     <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[180px] p-2 rounded-lg justify-center items-center lg:mt-8">
                         <img src="./assets/coin.png" alt="">
-                        <p class="font-bold">৳ <span id="donate-balance1">100</span></p>
+                        <p class="font-bold">৳ <span id="donate-balance2">100</span></p>
                     </div>
                     <h1 class="max-sm:text-center font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="lg:w-[460px] max-sm:text-center"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                     <input id="donate-balance-amount2" class="border border-1 lg:w-[450px] rounded-lg p-2 placeholder:text-black max-sm:text-center mx-auto max-sm:w-[100%]" type="number" placeholder="Write Donation Amount">
                     <br>
-                    <button id="donate-btn2" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
+                    <button onclick="transferMoneyTwo()" id="donate-btn2" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
                  </div>
              </div>
          </section>
@@ -119,13 +119,13 @@
                     <!-- Balance -->
                     <div class="max-sm:mx-auto max-sm:mt-5 flex gap-2 bg-gray-100 w-[180px] p-2 rounded-lg justify-center items-center lg:mt-8">
                         <img src="./assets/coin.png" alt="">
-                        <p class="font-bold">৳ <span id="donate-balance1">100</span></p>
+                        <p class="font-bold">৳ <span id="donate-balance3">100</span></p>
                     </div>
                     <h1 class="max-sm:text-center font-bold">Aid for Injured in the Quota Movement</h1>
                     <p class="lg:w-[460px] max-sm:text-center"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                     <input id="donate-balance-amount3" class="border border-1 lg:w-[450px] rounded-lg p-2 placeholder:text-black max-sm:text-center mx-auto max-sm:w-[100%]" type="number" placeholder="Write Donation Amount">
                     <br>
-                    <button id="donate-btn3" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
+                    <button onclick="transferMoneyThree() " id="donate-btn3" class="bg-[#B4F461] lg:px-[179px] py-3 rounded-lg max-sm: mx-auto max-sm:w-[100%]">Donate Now</button>
                  </div>
              </div>
          </section>
