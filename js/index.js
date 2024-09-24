@@ -29,6 +29,8 @@ function transferMoney() {
         document.getElementById('donate-balance1').innerText = plus
         //  Show the Modal
         document.getElementById('modal').classList.remove('hidden')
+        // Clear the input field
+
     }
     else {
         alert('Invalid amount or insufficient balance')
@@ -81,3 +83,43 @@ function transferMoneyThree() {
     }
 }
 
+// Donation Button Show
+document.getElementById('donation-btn').addEventListener('click', function () {
+    let donationBtn = document.getElementById('donation-btn')
+    donationBtn.style.backgroundColor = '#B4F461'
+    let historyBtn = document.getElementById('history-btn')
+    historyBtn.style.backgroundColor = '#E5E7EB'
+    document.getElementById('transaction-input').classList.add('hidden')
+})
+
+
+// History
+document.getElementById('history-btn').addEventListener('click', function () {
+    let historySection = document.getElementById('transaction-input');
+    let historyBtn = document.getElementById('history-btn')
+    historyBtn.style.backgroundColor = '#B4F461'
+
+    let donationBtn = document.getElementById('donation-btn')
+    donationBtn.style.backgroundColor = '#E5E7EB'
+
+    historySection.classList.remove('hidden')
+
+    // hide all section in Donation page 
+    
+})
+
+// History Transaction 
+
+function transactionSection (){
+    let inputAmount = addedValueShow('donate-balance-amount1');
+    let p = document.createElement('p')
+    p.innerText = 'Your money has been transfer BDT: {inputAmount} ' 
+    let transaction = document.getElementById('transaction-input')
+
+
+    transaction.appendChild(p)
+    console.log(transaction)
+    transaction.style.backgroundColor = '#B4F461'
+    transaction.style.color = 'red'
+    
+}
