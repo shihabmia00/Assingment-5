@@ -1,19 +1,3 @@
-// All class list easy for copy 
-// main-balance
-// donation-btn
-// history-btn
-// modal
-// donate-balance1
-// donate-balance2
-// donate-balance3
-// donate-balance-amount1
-// donate-balance-amount2
-// donate-balance-amount3
-// donate-btn1
-// donate-btn2
-// donate-btn3
-// transaction-input
-
 
 // Card Section 1 Done
 function transferMoney() {
@@ -40,8 +24,8 @@ function transferMoney() {
         let listItem = document.createElement('p');
        
         // Show date and time
-        let specificDate = new Date('2024-09-25T10:30:00'); 
-        listItem.textContent = `Donate for Flood at Noakhali, Bangladesh. Amount: ৳ ${inputAmount.toFixed(2)} ${specificDate} `;
+        let currentDateTime = new Date();
+        listItem.textContent = `Donate for Flood at Noakhali, Bangladesh. Amount: ৳ ${inputAmount.toFixed(2)} ${currentDateTime} `;
         transactionList.appendChild(listItem);
         listItem.style.backgroundColor = 'gray'
         listItem.style.marginBottom = '8px'
@@ -87,8 +71,8 @@ function transferMoneyTwo() {
         let listItem = document.createElement('p');
        
         // Show date and time
-        let specificDate = new Date('2024-09-25T10:30:00'); 
-        listItem.textContent = `Donate for Flood Relief in Feni, Bangladesh. Amount: ৳ ${inputAmountTwo.toFixed(2)} ${specificDate} `;
+        let currentDateTime = new Date(); 
+        listItem.textContent = `Donate for Flood Relief in Feni, Bangladesh. Amount: ৳ ${inputAmountTwo.toFixed(2)} ${currentDateTime} `;
         transactionList.appendChild(listItem);
         listItem.style.backgroundColor = 'gray'
         listItem.style.marginBottom = '8px'
@@ -127,8 +111,8 @@ function transferMoneyThree() {
         let listItem = document.createElement('p');
        
         // Show date and time
-        let specificDate = new Date('2024-09-25T10:30:00'); 
-        listItem.textContent = `Aid for Injured in the Quota Movement. Amount: ৳ ${inputAmountThree.toFixed(2)} ${specificDate} `;
+        let currentDateTime = new Date(); 
+        listItem.textContent = `Aid for Injured in the Quota Movement. Amount: ৳ ${inputAmountThree.toFixed(2)} ${currentDateTime} `;
         transactionList.appendChild(listItem);
         listItem.style.backgroundColor = 'gray'
         listItem.style.marginBottom = '8px'
@@ -148,6 +132,10 @@ document.getElementById('donation-btn').addEventListener('click', function () {
     let historyBtn = document.getElementById('history-btn')
     historyBtn.style.backgroundColor = '#E5E7EB'
     document.getElementById('transaction-input').classList.add('hidden')
+    document.getElementById('cards-one').classList.remove('hidden')
+    document.getElementById('cards-two').classList.remove('hidden')
+    document.getElementById('cards-three').classList.remove('hidden')
+    document.getElementById('footer').classList.remove('hidden')
 })
 
 
@@ -159,10 +147,15 @@ document.getElementById('history-btn').addEventListener('click', function () {
 
     let donationBtn = document.getElementById('donation-btn')
     donationBtn.style.backgroundColor = '#E5E7EB'
-
-    historySection.classList.remove('hidden')
-
-    // hide all section in Donation page 
+  
 
 })
+// Click and hide main section and show transaction section
+document.getElementById('history-btn').addEventListener('click', function(){
+    document.getElementById('cards-one').classList.add('hidden')
+    document.getElementById('cards-two').classList.add('hidden')
+    document.getElementById('cards-three').classList.add('hidden')
+    document.getElementById('footer').classList.add('hidden')
+    document.getElementById('transaction-input').classList.remove('hidden')
 
+})
