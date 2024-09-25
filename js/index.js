@@ -24,13 +24,33 @@ function transferMoney() {
     if (inputAmount > 0 && inputAmount <= mainBalance) {
         let plus = donateBalance + inputAmount
         let minus = mainBalance - inputAmount
+       
         // Update the UI 
         document.getElementById('main-balance').innerText = minus
         document.getElementById('donate-balance1').innerText = plus
+       
         //  Show the Modal
         document.getElementById('modal').classList.remove('hidden')
+       
         // Clear the input field
+        document.getElementById('donate-balance-amount1').value = ''
+       
+        // Add the transaction to the history
+        let transactionList = document.getElementById('transaction-input');
+        let listItem = document.createElement('p');
+       
+        // Show date and time
+        let specificDate = new Date('2024-09-25T10:30:00'); 
+        listItem.textContent = `Donate for Flood at Noakhali, Bangladesh. Amount: ৳ ${inputAmount.toFixed(2)} ${specificDate} `;
+        transactionList.appendChild(listItem);
+        listItem.style.backgroundColor = 'gray'
+        listItem.style.marginBottom = '8px'
+        listItem.style.borderRadius = '9px'
+        listItem.style.padding = '12px'
+        listItem.style.color = 'white'
 
+        
+        
     }
     else {
         alert('Invalid amount or insufficient balance')
@@ -51,11 +71,30 @@ function transferMoneyTwo() {
     if (inputAmountTwo > 0 && inputAmountTwo <= mainBalanceTwo) {
         let plusTwo = donateBalanceTwo + inputAmountTwo
         let minusTwo = mainBalanceTwo - inputAmountTwo
+        
         // Update the UI 
         document.getElementById('main-balance').innerText = minusTwo
         document.getElementById('donate-balance2').innerText = plusTwo
+        
         //  Show the Modal
         document.getElementById('modal').classList.remove('hidden')
+       
+        // Clear the input field
+        document.getElementById('donate-balance-amount2').value = ''
+
+        // Add the transaction to the history
+        let transactionList = document.getElementById('transaction-input');
+        let listItem = document.createElement('p');
+       
+        // Show date and time
+        let specificDate = new Date('2024-09-25T10:30:00'); 
+        listItem.textContent = `Donate for Flood Relief in Feni, Bangladesh. Amount: ৳ ${inputAmountTwo.toFixed(2)} ${specificDate} `;
+        transactionList.appendChild(listItem);
+        listItem.style.backgroundColor = 'gray'
+        listItem.style.marginBottom = '8px'
+        listItem.style.borderRadius = '9px'
+        listItem.style.padding = '12px'
+        listItem.style.color = 'white'
     }
     else {
         alert('Invalid amount or insufficient balance')
@@ -72,11 +111,30 @@ function transferMoneyThree() {
     if (inputAmountThree > 0 && inputAmountThree <= mainBalanceThree) {
         let plusThree = donateBalanceThree + inputAmountThree
         let minusThree = mainBalanceThree - inputAmountThree
+       
         // Update the UI 
         document.getElementById('main-balance').innerText = minusThree
         document.getElementById('donate-balance3').innerText = plusThree
+       
         //  Show the Modal
         document.getElementById('modal').classList.remove('hidden')
+      
+        // Clear the input field
+        document.getElementById('donate-balance-amount3').value = ''
+
+        // Add the transaction to the history
+        let transactionList = document.getElementById('transaction-input');
+        let listItem = document.createElement('p');
+       
+        // Show date and time
+        let specificDate = new Date('2024-09-25T10:30:00'); 
+        listItem.textContent = `Aid for Injured in the Quota Movement. Amount: ৳ ${inputAmountThree.toFixed(2)} ${specificDate} `;
+        transactionList.appendChild(listItem);
+        listItem.style.backgroundColor = 'gray'
+        listItem.style.marginBottom = '8px'
+        listItem.style.borderRadius = '9px'
+        listItem.style.padding = '12px'
+        listItem.style.color = 'white'
     }
     else {
         alert('Invalid amount or insufficient balance')
@@ -105,21 +163,6 @@ document.getElementById('history-btn').addEventListener('click', function () {
     historySection.classList.remove('hidden')
 
     // hide all section in Donation page 
-    
+
 })
 
-// History Transaction 
-
-function transactionSection (){
-    let inputAmount = addedValueShow('donate-balance-amount1');
-    let p = document.createElement('p')
-    p.innerText = 'Your money has been transfer BDT: {inputAmount} ' 
-    let transaction = document.getElementById('transaction-input')
-
-
-    transaction.appendChild(p)
-    console.log(transaction)
-    transaction.style.backgroundColor = '#B4F461'
-    transaction.style.color = 'red'
-    
-}
